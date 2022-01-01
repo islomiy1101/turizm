@@ -1,0 +1,14 @@
+{% extends 'basic.html'%}
+{% block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                {% for customer in data%}
+                <li><a href="{% url 'single-page' customer.id%}">{{customer}}</a></li>
+                {% endfor%}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock content%}

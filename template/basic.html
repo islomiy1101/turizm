@@ -1,0 +1,156 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>{% block title %} {% endblock title%}</title>
+    <link rel="stylesheet" href="{% static 'css/app.css'%}">
+      <style>
+           .border-flag{border:40px solid transparent;-o-border-image:url({% static 'images/flag_border.png'%}) 12% stretch;
+            border-image:url({% static 'images/flag_border.png'%}) 12% stretch}
+      </style>
+      {% block head%}
+      {% endblock %}
+  </head>
+  <body >
+
+<!--    <div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-12">-->
+<!--            <div class="card border-flag pt-2 px-2 pb-1 pt-lg-5 px-lg-5 pb-lg-2">-->
+<!--                <div class="row mb-5">-->
+<!--                    <div class="col-md-5 text-center my-auto font-weight-bold text-uppercase">-->
+<!--                        <h4>Ministry of Health of the Republic of Uzbekistan</h4>-->
+<!--                        <h4>CONFIRMATION OF COVID-19 TEST RESULT</h4>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-2">-->
+<!--                        <div class="mx-auto">-->
+<!--                            <img src="https://coronavirus-test.ssv.uz/images/emblem.svg" alt="" class="w-100">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-5 text-center my-auto font-weight-bold text-uppercase">-->
+<!--                        <h4>Министерство Здравоохранения Республики Узбекистан</h4>-->
+<!--                        <h4>Подтверждение результата теста COVID-19</h4>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="my-1">-->
+<!--                    <h5>-->
+<!--                        <strong>ID / Номер: </strong>-->
+<!--                        <span>2320645</span>-->
+<!--                    </h5>-->
+<!--                </div>-->
+<!--                <div class="my-1">-->
+<!--                    <h5>-->
+<!--                        <strong>Laboratory (name) / Лаборатория (название):-->
+<!--                        </strong>-->
+<!--                        <span>ООО "ENDO REFERENCE DIAGNOSTICS"</span>-->
+<!--                    </h5>-->
+<!--                </div>-->
+<!--                <div class="my-1">-->
+<!--                    <h5>-->
+<!--                        <strong>Place of sampling / Место забора анализа-->
+<!--                            : </strong>-->
+<!--                        <span>ООО "ENDO REFERENCE DIAGNOSTICS"</span>-->
+<!--                    </h5>-->
+<!--                </div>-->
+<!--                <div class="my-1">-->
+<!--                    <h5>-->
+<!--                        <strong>Research method / Метод исследования: </strong>-->
+<!--                        <span>Real-Time Polymerase chain reaction method (Real-Time PCR) / Полимеразная цепная реакция в реальном времени (ПЦР)</span>-->
+<!--                    </h5>-->
+<!--                </div>-->
+<!--                <hr style="border: 4px solid #bbb">-->
+<!--                                    <div class="my-1">-->
+<!--                        <h5>-->
+<!--                            <strong>Passport / Серия и номер паспорта: </strong>-->
+<!--                            <span>FA3697924</span>-->
+<!--                        </h5>-->
+<!--                    </div>-->
+<!--                                <div class="my-1">-->
+<!--                    <h5>-->
+<!--                        <strong>Full name / Полное имя-->
+<!--                            : </strong>-->
+<!--                        <span>KHOLIKOV ABDUKODIR KHOLMATOVICH</span>-->
+<!--                    </h5>-->
+<!--                </div>-->
+<!--                <div class="my-1">-->
+<!--                    <h5>-->
+<!--                        <strong>Birth date / Дата рождения-->
+<!--                            : </strong>-->
+<!--                        <span>10-12-1965</span>-->
+<!--                    </h5>-->
+<!--                </div>-->
+<!--                <div class="my-1">-->
+<!--                    <h5>-->
+<!--                        <strong>Sex / Пол-->
+<!--                            : </strong>-->
+<!--                        <span>-->
+<!--                                    Male / Мужчина-->
+<!--                                </span>-->
+<!--                    </h5>-->
+<!--                </div>-->
+<!--                <div class="my-1">-->
+<!--                    <h5>-->
+<!--                        <strong>Analysis date / Дата сдачи анализа-->
+<!--                            : </strong>-->
+<!--                        <span>-->
+<!--                                    24-12-2021 06:04-->
+<!--                                </span>-->
+<!--                    </h5>-->
+<!--                </div>-->
+<!--                                    <div class="my-1 d-flex align-items-baseline">-->
+<!--                        <h5 class="mr-2">-->
+<!--                            <strong>Test result and date / Результат и дата теста-->
+<!--                                : </strong>-->
+<!--                        </h5>-->
+<!--                        <h4>-->
+<!--                            <span>Negative / Отрицательный</span>-->
+<!--                            <strong>(24-12-2021 10:27)</strong>-->
+<!--                        </h4>-->
+<!--                    </div>-->
+<!--                                <div class="row my-2">-->
+<!--                    <div class="col-md-4"></div>-->
+<!--                    <div class="col-md-4">-->
+<!--                        <div id="qrContainer" class="w-100"><canvas width="256" height="256"></canvas></div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-4"></div>-->
+<!--                </div>-->
+<!--                <div class="mt-5 mx-auto text-center">-->
+<!--                    <h6 class="text-uppercase">-->
+<!--                        <span>Служба санитарно-эпидемиологического благополучия и общественного здоровья Республики Узбекистан</span>-->
+<!--                    </h6>-->
+<!--                    <h6>-->
+<!--                        <span>Адрес: </span>-->
+<!--                        <span>Tashkent city. Chilanzar district, Bunyodkor street, 46</span>-->
+<!--                    </h6>-->
+<!--                    <h6>-->
+<!--                        <span>Телефон: </span>-->
+<!--                        <a href="tel:998712761606">+998 71 276 16 06</a>-->
+<!--                    </h6>-->
+<!--                    <h6>-->
+<!--                        <span>Email: </span>-->
+<!--                        <a href="mailto:kancelyariyaresdsenm@minzdrav.uz">-->
+<!--                            kancelyariyaresdsenm@minzdrav.uz-->
+<!--                        </a>-->
+<!--                    </h6>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    </div>-->
+        {% block content%}
+
+        {% endblock content%}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>
